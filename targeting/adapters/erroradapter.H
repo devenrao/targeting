@@ -39,6 +39,7 @@
 // Include the platform specific errlentry.H file and
 // pick up the platform specific errlHndlt_t typedef. This is enough for
 // common code to use pass errlHndl_t pointers around and check for NULL
+#ifdef FSP
 #include <errlentry.H>
 #include <targeting/common/trace.H>
 
@@ -78,5 +79,5 @@ namespace ERRORLOG
 } // End namespace COMMON
 
 } // End namespace ERRORLOG
-
+#endif
 #endif // __TARGETING_ERRORADAPTER_H

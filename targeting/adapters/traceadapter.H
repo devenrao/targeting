@@ -39,7 +39,7 @@
 //******************************************************************************
 // Includes
 //******************************************************************************
-
+#ifdef FSP
 // Other Components
 #include <tracinterface.H>
 
@@ -60,5 +60,5 @@ namespace TARGETING
      */
     extern TARG_TD_t g_trac_targeting;
 }
-
+#endif
 #endif // __TARGETING_TRACEADAPTER_H

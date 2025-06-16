@@ -50,6 +50,7 @@ targeting_inc = include_directories(
   'targeting', 
   'targeting/common',
   'targeting/adapters',
+  'targeting/xmltohb',
   )
 
 # Build the library
