@@ -589,7 +589,7 @@ class TargetService
             Target*& o_masterProcChipTargetHandle,
             const Target*  i_pNodeTarget = NULL,
             const bool     i_onlyFunctional = false) const;
-
+#ifdef FSP
         /**
          *  @brief Returns the master processor chip target handle
          *
@@ -631,7 +631,7 @@ class TargetService
                   Target*& o_masterProcChipTargetHandle,
             const Target*  i_pNodeTarget = NULL,
             const bool     i_onlyFunctional = false) const;
-
+#endif
         /**
          *  @brief Returns whether the specified entity path attribute exists
          *      for a specified target, and if so, the value of that attribute
@@ -715,7 +715,7 @@ class TargetService
         void dump() const;
 
 #ifndef __HOSTBOOT_RUNTIME
-
+#ifdef FSP
         /**
          *  @brief This func changes the readOnly section of the targeting data
          *         to be writeable, allowing hostboot to update attributes that
@@ -741,7 +741,7 @@ class TargetService
          *  @return Error handle holding any errors accrued during execution
          */
         errlHndl_t modifyReadOnlyPagePermissions(bool i_allowWrites);
-
+#endif
         /**
          *  @brief Updates the targeting/attribute section data with the
          *  specified vector parameters.
@@ -830,7 +830,7 @@ class TargetService
          *  target handle available in incremental order in the target service.
          */
         Target* getNextTarget(const Target* i_pTarget) const;
-
+#ifdef FSP
         /**
          *  @brief Sets the isMasterNode Attribute to the Node Target handle
          *  Passed and takes care of syncing master node's system target handle
@@ -853,7 +853,7 @@ class TargetService
          *  master node couldn't be set as desired.
          */
         errlHndl_t setMasterNode(const Target* i_pTarget);
-
+#endif
         /**
          *  @brief this gives the information whether a system target is
          *  master-node's system target or non-master-node's system target
