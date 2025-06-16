@@ -23,8 +23,9 @@
 #if __cplusplus >= 201103L
 #include <array>
 #endif
-
+#ifdef FSP
 #include <utilmutex.H>
+#endif
 #include <targeting/common/entitypath.H>
 
 namespace TARGETING
@@ -34561,9 +34562,11 @@ typedef uint32_t ATTR_FSP_HW_RECONFIG_MAX_COUNT_type;
 typedef FMBX_DMA_STATE FMBX_DMA_STATE_ATTR;
 typedef FMBX_DMA_STATE ATTR_FMBX_DMA_STATE_type;
 
+#ifdef FSP
 // Type aliases and/or sizes for ATTR_LOCK_SERVICE_LOCK attribute
 typedef util::Mutex* LOCK_SERVICE_LOCK_ATTR;
 typedef util::Mutex* ATTR_LOCK_SERVICE_LOCK_type;
+#endif
 
 // Type aliases and/or sizes for ATTR_SBE_UPDATE attribute
 typedef uint8_t SBE_UPDATE_ATTR;
