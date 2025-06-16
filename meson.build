@@ -49,6 +49,7 @@ targeting_sources = files(
 targeting_inc = include_directories(
   'targeting', 
   'targeting/common',
+  'targeting/adapters',
   )
 
 # Build the library
